@@ -1,0 +1,239 @@
+{
+    "game_title": "Life Choices",
+    "initial_state": {
+        "player_name": "Adam",
+        "starting_scene": "beginnings"
+    },
+    "scenes": {
+        "beginnings": {
+            "dialogue": [
+                "Hello, welcome to the game",
+                "You're Adam",
+                "Now you can choose your own life",
+                "In this game you're allowed to make choices",
+                "Each different choices will lead you to different life outcomes",
+                "Only one of these roads is what Adam had taken in real life",
+                "Enjoy this game!",
+                "Loading...(You only have to press enter on this prototype)",
+                "You are in high school now. Grade 7."
+            ],
+            "next_choice": {
+                "prompt": "You're trying to be famous among guys:",
+                "options": {
+                    "yes": "famous_path",
+                    "no": "not_famous_path"
+                }
+            }
+        },
+        "not_famous_path": {
+            "dialogue": [
+                "You're abandoned among classmates",
+                "Adolescence come. You feel specifcally attached to 2 girls. ZTR and Emma"
+            ],
+            "next_choice": {
+                "prompt": "You have to choose one:",
+                "options": {
+                    "ztr": "ztr_path",
+                    "emma": "emma_not_famous_path"
+                }
+            }
+        },
+        "ztr_path": {
+            "dialogue": [
+                "At first it was only a secret",
+                "But it became so burning hot that you cannot hide it anyway",
+                "You decide to confess your love to her",
+                "But unluckily you're declined",
+                "Soon after, you have to decide between 2 senior high schools",
+                "School A, an ordinary school, and School B, an international one"
+            ],
+            "next_choice": {
+                "prompt": "Your choice?",
+                "options": {
+                    "A": "school_a_path",
+                    "B": "school_b_path"
+                }
+            }
+        },
+        "school_a_path": {
+            "dialogue": [
+                "You've entered School A",
+                "There you met Ms Q",
+                "She's so dangerously charming",
+                "But you still love ZTR so much",
+                "It hurts but you have to forget about Q",
+                "Meanwhile through hooking up with Q, you met Mr K"
+            ],
+            "next_choice": {
+                "prompt": "But if you're going to make friends with him?",
+                "options": {
+                    "yes": "k_path",
+                    "no": "giveup_path"
+                }
+            }
+        },
+        "k_path": {
+            "dialogue": [
+                "Choosing to befriend K, who is close to ZTR, turns out to be a pivotal decision.",
+                "Your friendship with K opens a new door; you find yourself in ZTR's social circle, gradually getting closer to her.",
+                "Over time, this proximity helps kindle a relationship between you and ZTR.",
+                "At first, everything seems like a dream come true. You share moments of joy, laughter, and mutual affection.",
+                "But as the days turn into months, you start facing the realities of a relationship.",
+                "Differences in interests, priorities, and perspectives begin to surface.",
+                "Despite your best efforts, these small cracks widen, leading to misunderstandings and arguments.",
+                "You both try to bridge the gap, but the emotional distance grows, making it harder to connect as you once did.",
+                "Eventually, the strain takes its toll, and you both realize that things aren't working out.",
+                "The breakup is painful"
+            ],
+            "next": "yl_path"
+        },
+        "yl_path": {
+            "dialogue": [
+                "At some point you met YL, another charming girl",
+                "This time you're bound to be trapped",
+                "You talk to her online day and night",
+                "And a few encounters can make your day better",
+                "You decide to give up on ZTR and go for this person",
+                "And so you did"
+            ],
+            "outcomes": {
+                "declined": {
+                    "probability": 0.5,
+                    "next": "declined_yl_path"
+                },
+                "not_declined": {
+                    "probability": 0.5,
+                    "next": "not_declined_yl_path"
+                }
+            }
+        },
+        "declined_yl_path": {
+            "dialogue": [
+                "But unfortunately, you got declined",
+                "Things are getting wild",
+                "She declined you but still would talk to you and date you",
+                "You don't understand why but you're glad",
+                "That she's actually become your girlfreind",
+                "You love her so much"
+            ],
+            "outcomes": {
+                "betray_august": {
+                    "probability": 0.5,
+                    "next": "betray_aug_path"
+                },
+                "betray_later": {
+                    "probability": 0.5,
+                    "next": "betray_later_path"
+                }
+            }
+        },
+        "betray_aug_path": {
+            "dialogue": [
+                "But one day, you discovered that she's out with other boys",
+                "You're betrayed or fooled",
+                "You forget everything about her and began you new life",
+                "Months later, you met Ms H online",
+                "She's living a Canada",
+                "You can tell from chats that she's so passionate and inncocent",
+                "One day she invited you to visit her"
+            ],
+            "next_choice": {
+                "prompt": "You choose to go or not:",
+                "options": {
+                    "yes": "h_path",
+                    "no": "not_h_path"
+                }
+            }
+        },
+        "h_path": {
+            "dialogue": ["The flight took off for Calgary..."]
+        },
+        "not_h_path": {
+            "dialogue": ["The story between you and H just ends online..."]
+        },
+        "school_b_path": {
+            "dialogue": [
+                "You've chosen School B, the international school.",
+                "Here, you find a diverse group of students from all around the world.",
+                "This new environment challenges you but also opens up a world of opportunities.",
+                "You join various clubs and start to develop a new set of interests and skills.",
+                "Your confidence grows, and you start participating in competitions.",
+                "In one of these competitions, you meet a mentor who guides you in your academic journey.",
+                "You are heading towards an international college, in Canada"
+            ],
+            "next": "dlc_path"
+        },
+        "dlc_path": {
+            "dialogue": [
+                "############",
+                "Below are exclusive contents",
+                "You are now in Canada, a place of interest and ferment",
+                "You enter the top school and can finally live the life you want",
+                "And most importantly, even air here smells like love",
+                "You cannot wait to go out for social",
+                "One day at a party, you meet YL, a charming girl who is also from China",
+                "You ask her for contact and talk to her day and night",
+                "Of course, just online",
+                "As days pass, your conversations with YL become the highlight of your day.",
+                "You find her intriguing, not just for her charming looks, but for her intellect and wit.",
+                "She shares your love for literature and music, creating a deep, invisible bond.",
+                "One day, you decide to take a leap of faith and ask her out on a real date.",
+                "To your delight, she agrees. The plan is simple: a walk along the beautiful streets of the city, followed by dinner.",
+                "The date is magical. You both discover the joy of each other's company outside the digital world.",
+                "Her laughter is more melodious in person, her insights more profound.",
+                "You feel a connection that's rare and special, something that goes beyond mere attraction.",
+                "As the evening ends, you realize you don't want it to. You ask her if she feels the same way, and she smiles and nods.",
+                "One crisp autumn evening, as the sunset paints the sky in hues of orange and gold, you take her to the place where you first met.",
+                "Your heart races as you reach into your pocket.",
+                "With a deep breath, you kneel before her",
+                "You pulled out a ring..."
+            ]
+        },
+        "endings": {
+            "dialogue": [
+                "############",
+                "5 years later...",
+                "You're in a church somewhere in Massachusetts",
+                "It's your wedding day",
+                "Outside are the fireworks",
+                "You see through the firework, and see the fireworks 10 years ago",
+                "Which was on another couple's wedding",
+                "And then you're passing by",
+                "At the first day of your high school"
+            ]
+        },
+        "famous_path": {
+            "outcomes": {
+                "declined": {
+                    "probability": 0.5,
+                    "next": "emma_famous_declined_path"
+                },
+                "not_declined": {
+                    "probability": 0.5,
+                    "next": "emma_famous_not_declined_path"
+                }
+            }
+        },
+        "emma_famous_declined_path": {
+            "dialogue": [
+                "In your pursuit of popularity, you gather the courage to confess your feelings to Emma.",
+                "However, she does not reciprocate, leaving you in a state of rejection and self-reflection.",
+                "This experience becomes a turning point, leading you to reassess your priorities.",
+                "You begin to focus more on genuine connections rather than social status.",
+                "This new mindset opens up a path of self-discovery and meaningful relationships."
+            ],
+            "next": "school_b_path"
+        },
+        "emma_famous_not_declined_path": {
+            "dialogue": [
+                "As a popular and charismatic figure, you capture Emma's attention and affection.",
+                "She is attracted to your outgoing personality and zest for life.",
+                "Emma generously shares her world with you",
+                "You both go to Canada, enjoying a life of freedom and happiness",
+                "However, as time passes, you find yourself drifting away from her.",
+                "You make the difficult decision to leave Emma, seeking a different path for your life."
+            ],
+            "next": "dlc_path"
+        }
+    }
+} 
