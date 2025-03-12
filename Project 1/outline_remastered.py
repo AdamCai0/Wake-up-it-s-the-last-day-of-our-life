@@ -1,5 +1,4 @@
 import random
-import cv2
 
 def enter():
     input()
